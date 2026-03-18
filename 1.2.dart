@@ -12,5 +12,26 @@ void main () {
   } else {
     a = double.parse(input);
   }
-  print(a);
+  print('Введите второе число:');
+
+  String inputB = stdin.readLineSync() ?? '';
+  double b;
+
+
+  if (inputB.isEmpty) {
+    b = 0;
+  } else {
+    b = double.parse(inputB);
+  }
+  print(a+b);
+  print(a-b);
+  print(a*b);
+
+  if (a > b) {
+    print('$a больше $b');
+  } else if (a < b) {
+    print('$b больше $a');
+  } else {
+    print ('$a равно $b');
+  }
 }
